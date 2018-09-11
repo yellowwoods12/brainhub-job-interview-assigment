@@ -1,0 +1,25 @@
+{
+  "name": "brainhub-job-interview-assigment",
+  "version": "1.0.0",
+  "description": "Simple app allowing user sending data through form to backend API. Includes frontend and backend validation. Finaly data is saved to MongoDB. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErnestZiemkowski/brainhub-job-interview-assigment.git"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express.js",
+    "React.js",
+    "Node.js"
+  ],
+  "author": "Ernest Ziemkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErnestZiemkowski/brainhub-job-interview-assigment/issues"
+  },
+  "homepage": "https://github.com/ErnestZiemkowski/brainhub-job-interview-assigment#readme"
+}
