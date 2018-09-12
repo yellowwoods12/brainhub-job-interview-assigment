@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  background: #141414;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  margin: 20px;
+  color: #eee;
+}
+
+fieldset {
+  padding: 20px;
+  margin: 20px 0;
+  border: 3px solid #eee;
+}
+
+legend {
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+input[type="firstName"],
+input[type="lastName"] {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 50px;
+  border: 0;
+  border-radius: 4px;
+  background: url(img/persons.png) no-repeat;
+  background-color: #222;
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  clear: both;
+}
+
+input[type="email"] {
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 50px;
+  border: 0;
+  border-radius: 4px;
+  background: url(img/inputs.png) no-repeat;
+  background-color: #222;
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  clear: both;
+  background-position: 7px 8px;
+}
+
+input[type="date"] {
+  display: block;
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 50px;
+  border: 0;
+  border-radius: 4px;
+  background: url(img/calendars.png) no-repeat;
+  background-color: #222;
+  font-size: 16px;
+  color: #fff;
+  float: left;
+  clear: both;
+  background-position: 7px 8px;
+}
+
+input[type="submit"] {
+  background-color: #b61111;
+  padding: 15px;
+  color: #fff;
+  border-radius: 4px;
+  border: 0;
+  width: 200px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+  float: left;
+  clear: both;
+}
+
+input[type="firstName"],
+input[type="lastName"] {
+  background-position: 7px 4px;
+}
+
+input[type="firstName"]:valid,
+input[type="lastName"]:valid {
+  border: 2px solid #fff;
+  background-position: 7px -32px;
+}
+
+input[type="email"]:valid {
+  border: 2px solid #fff;
+  background-position: 7px -22px;
+}
+
+input[type="date"]:valid {
+  border: 2px solid #fff;
+  background-position: 7px -30px;
+}
+
+input[type="firstName"]:valid + .tick,
+input[type="lastName"]:valid + .tick,
+input[type="email"]:valid + .tick {
+  background: url(img/tick.png) center;
+  background-size: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 10px;
+}
+
+/* input[type="email"]:valid + .tick,
+input[type="date"]:valid + .tick  {
+  background: url(img/tick.png) center;
+  background-size: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 10px;
+} */
+
+input[type="date"]:valid + .tick {
+  background: url(img/tick.png) center;
+  background-size: 100%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 10px;
+}
