@@ -3,11 +3,11 @@ const { body, validationResult } = require('express-validator/check');
 
 function insertUser(req, res) {
 
-    req.check('firstName', 'First name value is required!').notEmpty();
-    req.check('lastName', 'Last name value is required!').notEmpty();
-    req.check('email', 'Email value is required!').notEmpty();
+    req.check('firstName', 'firstName value is required!').notEmpty();
+    req.check('lastName', 'lastName value is required!').notEmpty();
+    req.check('email', 'email value is required!').notEmpty();
     req.check('email', 'Invalid Email!').isEmail();
-    req.check('eventDate', 'Event Date is required!').notEmpty();
+    req.check('eventDate', 'eventDate value is required!').notEmpty();
     
     let errors = req.validationErrors();
 
