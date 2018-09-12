@@ -41,11 +41,11 @@ function insertUser(req, res) {
 }
 
 function getUsers(req, res) {
-    User.find((err, expenses) => {
+    User.find((err, users) => {
         if(err) {
             res.send(err);
         }
-        res.json(expenses);
+        res.json(users);
     });
 }
 

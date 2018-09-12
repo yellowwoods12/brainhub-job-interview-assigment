@@ -83,7 +83,7 @@ describe('Test API endpoints', function() {
                     }
                     res.should.have.status(422);
                     let errors = res.body.errors;
-                    errors.splice(3, 1); // I remove error caused by invalid email syntax in order to quickly map and check errors caused by null values
+                    errors.splice(3, 1); // I remove error caused by invalid email syntax in order to quickly map and check only errors caused by null values
                     errors.map((error) => {
                         error.should.have.property('msg').equal(`${error.param} value is required!`).be.a('string');
                     });
@@ -108,6 +108,58 @@ describe('Test API endpoints', function() {
                     let error = res.body.errors.shift();
                     error.should.have.property('msg').equal('Invalid Email!').be.a('string');
                     done();
+                });
+        });
+    });
+    describe('Endpoint GET /users', function() {
+        it('Should recieve empty list of users', function(done) {
+            User.remove({}, function(err) {
+                if(err) {
+                    res.send(err);
+                }
+            });
+            chai.request(baseUrl)
+                .get('/users')
+                .end(function(err, res) {
+                    if(err) {
+                        res.send(err);
+                    }
+                    res.body.length.should.be.equal(0);
+                    done();
+                });          
+        });
+        it('Should recieve 3-elements long list of users', function(done) {
+            let users = [
+                {
+                    firstName: 'John',
+                    lastName: 'First',
+                    email: 'john.first@gmail.com',
+                    eventDate: '11-09-2018 10:10:45'
+                },
+                {
+                    firstName: 'John',
+                    lastName: 'Second',
+                    email: 'john.second@gmail.com',
+                    eventDate: '11-09-2018 10:10:45'
+                },
+                {
+                    firstName: 'John',
+                    lastName: 'Third',
+                    email: 'john.third@gmail.com',
+                    eventDate: '11-09-2018 10:10:45'
+                }
+            ];
+            User.insertMany(users)
+                .then(function() {
+                    chai.request(baseUrl)
+                    .get('/users')
+                    .end(function(err, res) {
+                        if(err) {
+                            res.send(err);
+                        }
+                        res.body.length.should.be.equal(users.length);
+                        done();
+                    });              
                 });
         });
     });
