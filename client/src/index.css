@@ -21,6 +21,14 @@ legend {
   letter-spacing: 0.1em;
 }
 
+#message-handler {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  float: left;
+  padding: 10px 10px 30px 0;
+}
+
 input[type="firstName"],
 input[type="lastName"] {
   display: block;
@@ -32,6 +40,7 @@ input[type="lastName"] {
   background-color: #222;
   font-size: 16px;
   color: #fff;
+  width: 170px;
   float: left;
   clear: both;
 }
@@ -46,6 +55,7 @@ input[type="email"] {
   background-color: #222;
   font-size: 16px;
   color: #fff;
+  width: 170px;
   float: left;
   clear: both;
   background-position: 7px 8px;
@@ -53,7 +63,7 @@ input[type="email"] {
 
 input[type="date"] {
   display: block;
-  width: 200px;
+  width: 170px;
   margin-bottom: 20px;
   padding: 10px 10px 10px 50px;
   border: 0;
