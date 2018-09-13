@@ -27,7 +27,8 @@ app.listen(port, () => {
     console.log('Server listens on port: ' + port);
 });
 
-mongoose.connect('mongodb://ernest:dupadupa1@ds151282.mlab.com:51282/brainhub-job-interview-assigment', { useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/mydb');
+
 mongoose.connection.once('open', () => {
     console.log('Connected to database');
 });
