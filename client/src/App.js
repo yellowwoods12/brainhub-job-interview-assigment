@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import axios from 'axios';
 
 const queryString = require('querystring');
@@ -45,7 +44,6 @@ class App extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const formEl = this.formEl;
-    // const formLength = formEl.length;
     if(formEl.checkValidity() === false) {
       document.getElementById("message-handler").innerHTML = 'Please, fill the form correctly.';
     } else {

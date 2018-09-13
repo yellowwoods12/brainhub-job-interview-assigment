@@ -1,5 +1,4 @@
 const User = require('../models/User');
-const { body, validationResult } = require('express-validator/check');
 
 function insertUser(req, res) {
 
